@@ -129,7 +129,7 @@ namespace POLTest1.Tests.Settings_API
         [Given(@"Provided with the valid SettingsID\.")]
         public void GivenProvidedWithTheValidSettingsID_(Table table)
         {
-            Console.WriteLine("Testpass");
+            Console.WriteLine("Testpass Aparna added for testing purpose");
             var SettingsTableList = table.CreateSet<SettingsInformation>();
             var settingsTableList = SettingsTableList.ToList();
             var count = settingsTableList.Count();
