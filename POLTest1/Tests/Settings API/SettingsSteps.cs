@@ -160,7 +160,7 @@ namespace POLTest1.Tests.Settings_API
         {
             for (var i = 0; i < jsonResponseList.Count(); i++)
             {
-                Assert.IsTrue(jsonResponseList[i].Contains("\"settingsId\":" + GetsettingsID), "The response doesnot contain the settings ID for "+ GetsettingsID);
+                Assert.IsTrue(jsonResponseList[i].Contains("\"settingsId\":" + GetsettingsID), "Testpass Aparna added for testing purpose @@@@The response doesnot contain the settings ID for " + GetsettingsID);
 
             }
         }
