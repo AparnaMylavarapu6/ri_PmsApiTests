@@ -48,7 +48,7 @@ namespace RentersInsuranceApiTests
 
                 //Set hostUrl
              //   if (hostUrl == null) hostUrl = properties["hostUrl"].Trim();
-                if (token == null) token = properties["token"].Trim();
+            //    if (token == null) token = properties["token"].Trim();
 
                   propertyLoaded = true;
             }
