@@ -35,13 +35,16 @@ namespace RentersInsuranceApiTests
         {
             if (!propertyLoaded)
             {
+                Console.WriteLine("test");
+
                 //Find properties.ini path 
                 propPath = PropertiesController.getPropertiesPath();
+
 
                 //Load properties from .ini file
                 properties = PropertiesController.readProperties(propPath);
 
-                Console.WriteLine("test");
+             
 
                 //TODO: Use a logger library
               
