@@ -210,7 +210,7 @@ namespace RentersInsuranceApiTests
             //properties = PropertiesController.readProperties(propPath);
             //environment = properties["environment"].Trim();
             environment = "sat";
-            Console.WriteLine("REALPAGETESTPATH : " + Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory) + "properties.ini");
+            Console.WriteLine("REALPAGETESTPATH : " + Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory) + "\\properties.ini");
 
             table.Rows.Add("BillingApi", "dev", "https://ri-billingapi-dev.realpage.com/");
             table.Rows.Add("BillingApi", "sat", "https://ri-billingapi-sat.realpage.com/");
