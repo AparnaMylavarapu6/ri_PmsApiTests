@@ -17,7 +17,7 @@ namespace RentersInsuranceApiTests.Controllers
             //    path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)  + "properties.ini";
            // path = "C:\"Users\"amylavarapu\".jenkins\"workspace\"TestAPICICDFinal\"POLTest1\"properties.ini\";
             
-            path = Path.GetFileName(Path.GetDirectoryName("C:/Users/amylavarapu/.jenkins/workspace/TestAPICICDFinal/POLTest1"));
+            path = Path.GetFileName(Path.GetDirectoryName("C:/Users/amylavarapu/.jenkins/workspace/TestAPICICDFinal/POLTest1/properties.ini"));
 
             return path;
         }
