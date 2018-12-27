@@ -2,7 +2,6 @@
 
 @happypath
 Scenario: To Verify the GET request of Settings API using SettingsID
-
 	Given Provided with the valid SettingsID.
 	| SettingsID |
 	| 1649     |
@@ -11,7 +10,6 @@ Scenario: To Verify the GET request of Settings API using SettingsID
 	
 @happypath
 Scenario: To Verify the Delete request of Settings API using SettingsID
-
 	Given Provided with the valid SettingsID to be deleted.
 	| SettingsID |
 	| 260     |

@@ -70,53 +70,53 @@ namespace POLTest1.Tests.SettingsAPI
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table143 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "SettingsID"});
-            table143.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "1649"});
-#line 6
- testRunner.Given("Provided with the valid SettingsID.", ((string)(null)), table143, "Given ");
-#line 9
+#line 5
+ testRunner.Given("Provided with the valid SettingsID.", ((string)(null)), table1, "Given ");
+#line 8
  testRunner.When("I send a GET request to fetch settings details.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 9
  testRunner.Then("The valid settings details should be displayed.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("To Verify the Delete request of Settings API using SettingsID", new string[] {
-                "happypath"}, SourceLine=12)]
+                "happypath"}, SourceLine=11)]
         public virtual void ToVerifyTheDeleteRequestOfSettingsAPIUsingSettingsID()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify the Delete request of Settings API using SettingsID", new string[] {
                         "happypath"});
-#line 13
+#line 12
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table144 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "SettingsID"});
-            table144.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "260"});
-#line 15
- testRunner.Given("Provided with the valid SettingsID to be deleted.", ((string)(null)), table144, "Given ");
-#line 18
+#line 13
+ testRunner.Given("Provided with the valid SettingsID to be deleted.", ((string)(null)), table2, "Given ");
+#line 16
  testRunner.When("I send a DELETE request to Delete settings details.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 19
+#line 17
  testRunner.Then("The settings details should be deleted.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("To Verify the POST request of Settings API", new string[] {
-                "happypath"}, SourceLine=21)]
+                "happypath"}, SourceLine=19)]
         public virtual void ToVerifyThePOSTRequestOfSettingsAPI()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify the POST request of Settings API", new string[] {
                         "happypath"});
-#line 22
+#line 20
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table145 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "EntityId",
                         "EntityType",
                         "EntityText",
@@ -126,7 +126,7 @@ this.ScenarioSetup(scenarioInfo);
                         "zip",
                         "UserId",
                         "ModifiedById"});
-            table145.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "605499",
                         "1",
                         "Southern Elms",
@@ -136,37 +136,37 @@ this.ScenarioSetup(scenarioInfo);
                         "74135",
                         "0",
                         "0"});
-#line 23
- testRunner.Given("I have provided Entity Settings details.", ((string)(null)), table145, "Given ");
+#line 21
+ testRunner.Given("I have provided Entity Settings details.", ((string)(null)), table3, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table146 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "settingsID",
                         "settingType",
                         "settingValue"});
-            table146.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "260",
                         "HO4",
                         "true"});
-#line 26
- testRunner.And("Provided with the new SettingsInfo details.", ((string)(null)), table146, "And ");
-#line 29
+#line 24
+ testRunner.And("Provided with the new SettingsInfo details.", ((string)(null)), table4, "And ");
+#line 27
  testRunner.When("I send a POST request to add new settings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 28
  testRunner.Then("The valid settings details should be saved.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("To Verify the PUT request of Settings API", new string[] {
-                "happypath"}, SourceLine=32)]
+                "happypath"}, SourceLine=30)]
         public virtual void ToVerifyThePUTRequestOfSettingsAPI()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify the PUT request of Settings API", new string[] {
                         "happypath"});
-#line 33
+#line 31
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table147 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "EntityId",
                         "EntityType",
                         "EntityText",
@@ -176,7 +176,7 @@ this.ScenarioSetup(scenarioInfo);
                         "zip",
                         "UserId",
                         "ModifiedById"});
-            table147.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "601234",
                         "1",
                         "BlueStone Lofts",
@@ -186,78 +186,78 @@ this.ScenarioSetup(scenarioInfo);
                         "55803",
                         "-1",
                         "0"});
-#line 34
- testRunner.Given("I have provided Entity Settings details for PUT Request.", ((string)(null)), table147, "Given ");
+#line 32
+ testRunner.Given("I have provided Entity Settings details for PUT Request.", ((string)(null)), table5, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table148 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "settingsID",
                         "settingType",
                         "settingValue"});
-            table148.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "291",
                         "POL",
                         "true"});
-#line 37
- testRunner.And("Provided with the new SettingsInfo details for PUT.", ((string)(null)), table148, "And ");
-#line 40
+#line 35
+ testRunner.And("Provided with the new SettingsInfo details for PUT.", ((string)(null)), table6, "And ");
+#line 38
  testRunner.When("I send a PUT request to update new settings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 41
+#line 39
  testRunner.Then("The valid settings details should be updated.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("To Verify the GET request of Settings API using EntityID and EntityType", new string[] {
-                "happypath"}, SourceLine=43)]
+                "happypath"}, SourceLine=41)]
         public virtual void ToVerifyTheGETRequestOfSettingsAPIUsingEntityIDAndEntityType()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify the GET request of Settings API using EntityID and EntityType", new string[] {
                         "happypath"});
-#line 44
+#line 42
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table149 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "EntityID",
                         "EntityType"});
-            table149.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "9277",
                         "Property"});
-#line 46
- testRunner.Given("Provided with the valid EntityID and EntityType.", ((string)(null)), table149, "Given ");
-#line 50
+#line 44
+ testRunner.Given("Provided with the valid EntityID and EntityType.", ((string)(null)), table7, "Given ");
+#line 48
  testRunner.When("I send a GET request to fetch settings details EntityID and EntityType.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 49
  testRunner.Then("The valid settings details should be displayed based on EntityID and EntityType.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("To Verify the GET request of Settings API using PropertyID and PropertyType", new string[] {
-                "happypath"}, SourceLine=53)]
+                "happypath"}, SourceLine=51)]
         public virtual void ToVerifyTheGETRequestOfSettingsAPIUsingPropertyIDAndPropertyType()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify the GET request of Settings API using PropertyID and PropertyType", new string[] {
                         "happypath"});
-#line 54
+#line 52
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table150 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "PropertyID",
                         "PropertyType"});
-            table150.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "609769",
                         "LeasingDesk"});
-            table150.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "2913444",
                         "Onesite"});
-            table150.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "6717648",
                         "Yardi"});
-#line 56
- testRunner.Given("Provided with the valid PropertyID and PropertyType.", ((string)(null)), table150, "Given ");
-#line 61
+#line 54
+ testRunner.Given("Provided with the valid PropertyID and PropertyType.", ((string)(null)), table8, "Given ");
+#line 59
  testRunner.When("I send a GET request to fetch settings details PropertyID and PropertyType.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 60
  testRunner.Then("The valid settings details should be displayed based on PropertyID and PropertyTy" +
                     "pe.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
