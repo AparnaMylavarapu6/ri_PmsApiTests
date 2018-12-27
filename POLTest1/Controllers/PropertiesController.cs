@@ -14,7 +14,8 @@ namespace RentersInsuranceApiTests.Controllers
             //Otherwise, default to Application directory. 
             var path = Environment.GetEnvironmentVariable("PROPERTIES_FILE_PATH");
             if (path == null || path.Length == 0)
-                path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory) + "\\Debug\\" + "properties.ini";
+                path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)  + "properties.ini";
+                //path = Path.GetDirectoryName
             return path;
         }
 

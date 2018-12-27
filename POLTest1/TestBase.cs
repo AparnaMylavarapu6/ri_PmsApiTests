@@ -41,6 +41,8 @@ namespace RentersInsuranceApiTests
                 //Load properties from .ini file
                 properties = PropertiesController.readProperties(propPath);
 
+                Console.WriteLine(propPath);
+
                 //TODO: Use a logger library
                 if (properties["verbose"] != null) verbose = Convert.ToBoolean(properties["verbose"]);
 
