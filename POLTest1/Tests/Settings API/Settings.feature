@@ -14,7 +14,7 @@ Scenario: To Verify the Delete request of Settings API using SettingsID
 
 	Given Provided with the valid SettingsID to be deleted.
 	| SettingsID |
-	| 1631     |
+	| 260     |
 	When I send a DELETE request to Delete settings details.
 	Then The settings details should be deleted.
 	

@@ -96,7 +96,7 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table144 = new TechTalk.SpecFlow.Table(new string[] {
                         "SettingsID"});
             table144.AddRow(new string[] {
-                        "1631"});
+                        "260"});
 #line 15
  testRunner.Given("Provided with the valid SettingsID to be deleted.", ((string)(null)), table144, "Given ");
 #line 18
