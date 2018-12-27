@@ -125,7 +125,8 @@ namespace RentersInsuranceApiTests.Controllers
                     Method == HttpVerb.POST &&
                     response.StatusCode ==
                     HttpStatusCode.Created || //TODO: Need confirmation from Iqbal regarding this.
-                    Method == HttpVerb.GET && response.StatusCode == HttpStatusCode.OK
+                    Method == HttpVerb.GET && response.StatusCode == HttpStatusCode.OK ||
+                    Method == HttpVerb.DELETE && response.StatusCode == HttpStatusCode.OK
                 )
                 {
                     // grab the response

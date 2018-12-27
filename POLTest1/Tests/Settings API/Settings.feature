@@ -5,9 +5,9 @@ Scenario: To Verify the GET request of Settings API using SettingsID
 
 	Given Provided with the valid SettingsID.
 	| SettingsID |
-	| 1520     |
+	| 1649     |
 	When I send a GET request to fetch settings details.
-	 Then The valid settings details should be displayed.
+	Then The valid settings details should be displayed.
 	
 @happypath
 Scenario: To Verify the Delete request of Settings API using SettingsID

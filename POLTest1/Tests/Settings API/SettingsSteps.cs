@@ -123,13 +123,13 @@ namespace POLTest1.Tests.Settings_API
         public string DelsettingsID;
         public string settingType;
         public bool settingValue;
+        public string token;
 
 
         //GET Method
         [Given(@"Provided with the valid SettingsID\.")]
         public void GivenProvidedWithTheValidSettingsID_(Table table)
         {
-            Console.WriteLine("Testpass Aparna added for testing purpose");
             var SettingsTableList = table.CreateSet<SettingsInformation>();
             var settingsTableList = SettingsTableList.ToList();
             var count = settingsTableList.Count();
@@ -143,7 +143,7 @@ namespace POLTest1.Tests.Settings_API
             var count = settingsIDlist.Count();
             init();
            var host = GetUrl("SettingsApi");
-          // var token = GetTokenInfo();
+           token = GetTokenInfo();
             for (var i = 0; i < count; i++)
             {
                 GetsettingsID = settingsIDlist[i].settingsID;
@@ -160,7 +160,7 @@ namespace POLTest1.Tests.Settings_API
         {
             for (var i = 0; i < jsonResponseList.Count(); i++)
             {
-                Assert.IsTrue(jsonResponseList[i].Contains("\"settingsId\":" + GetsettingsID), "Testpass Aparna added for testing purpose @@@@The response doesnot contain the settings ID for " + GetsettingsID);
+                Assert.IsTrue(jsonResponseList[i].Contains("\"settingsId\":" + GetsettingsID), "Testpass Aparna adde for testing purpose @@@@The response doesnot contain the settings ID for " + GetsettingsID);
 
             }
         }
@@ -183,12 +183,12 @@ namespace POLTest1.Tests.Settings_API
             var count = DeletesettingsIDlist.Count();
             init();
             var host = GetUrl("SettingsApi");
-            //var token = GetTokenInfo();
+            token = GetTokenInfo();
             for (var i = 0; i < count; i++)
             {
                 DelsettingsID = DeletesettingsIDlist[i].settingsID;
                 var jsonRequest = host + "/Widget/" + DelsettingsID;
-                jsonResponse = doExecuteApiWithHeaders(jsonRequest, "DELETE", acceptHeader:"application/json", authHeader:"Bearer " + token,jsonPostPayload: "");
+                jsonResponse = doExecuteApiWithHeaders(jsonRequest, "DELETE", "", "text/plain", "Bearer " + token, "");
                 jsonResponseList.Add(jsonResponse);
 
             }
@@ -199,7 +199,8 @@ namespace POLTest1.Tests.Settings_API
         public void ThenTheSettingsDetailsShouldBeDeleted_()
         {
             for (var i = 0; i < jsonResponseList.Count(); i++)
-                Assert.IsNotNull(jsonResponse);
+               // Assert.IsNotNull(jsonResponse);
+                Assert.IsTrue(jsonResponseList[i].Contains("\"EntitySettingsInfo\": null"), "The Settings details are not deleted");
         }
 
         //Post 
@@ -224,6 +225,7 @@ namespace POLTest1.Tests.Settings_API
         {
             init();
             var host = GetUrl("SettingsApi");
+            token = GetTokenInfo();
             EntitySettingsInfo entitySettingsInfoObj = new EntitySettingsInfo();
             EntitySettingsObject entitySettingsObject = new EntitySettingsObject();
             var url = host + "/Widget/";
@@ -279,7 +281,8 @@ namespace POLTest1.Tests.Settings_API
 
             init();
             var host = GetUrl("SettingsApi");
-           EntitySettingsInfo putentitySettingsInfoObj = new EntitySettingsInfo();
+            token = GetTokenInfo();
+            EntitySettingsInfo putentitySettingsInfoObj = new EntitySettingsInfo();
            EntitySettingsObject putentitySettingsObject = new EntitySettingsObject();
 
             var url = host + "/Widget/";
@@ -329,6 +332,7 @@ namespace POLTest1.Tests.Settings_API
 
             init();
             var host = GetUrl("SettingsApi");
+            token = GetTokenInfo();
             var url = host + "Widget/";
             for (var i = 0; i < EntityInfoList.Count(); i++)
             {
@@ -365,7 +369,8 @@ namespace POLTest1.Tests.Settings_API
             {
                 init();
                 var host = GetUrl("SettingsApi");
-                var url = host + "/Widget/PropertyType/";
+                 token = GetTokenInfo();
+                 var url = host + "/Widget/PropertyType/";
                 for (var i = 0; i < PropertyInfoList.Count(); i++)
                 {
                     propertyId = PropertyInfoList[i].PropertyId.ToString();

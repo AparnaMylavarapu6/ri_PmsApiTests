@@ -73,13 +73,13 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table143 = new TechTalk.SpecFlow.Table(new string[] {
                         "SettingsID"});
             table143.AddRow(new string[] {
-                        "1520"});
+                        "1649"});
 #line 6
  testRunner.Given("Provided with the valid SettingsID.", ((string)(null)), table143, "Given ");
 #line 9
  testRunner.When("I send a GET request to fetch settings details.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
-  testRunner.Then("The valid settings details should be displayed.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The valid settings details should be displayed.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

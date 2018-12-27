@@ -142,13 +142,19 @@ namespace RentersInsuranceApiTests
         {
             string token = null;
 
-            endPointUrl = hostUrl + "/InsuranceServices/Security/ValidateAnalytics";
+         /*   endPointUrl = hostUrl + "/InsuranceServices/Security/ValidateAnalytics";
             var analyticsCode = doExecuteApi(endPointUrl, "GET", null);
             Assert.IsNotNull(analyticsCode);
             Console.WriteLine(analyticsCode);
 
             endPointUrl = hostUrl + "/InsuranceServices/Security/RequestToken";
             var tokenResponse = doExecuteApi(endPointUrl, "POST", analyticsCode);
+            Assert.IsNotNull(tokenResponse); */
+
+            var Key = "MHpZaGlvN0ROUmlnYmRCaVZHbll2Zz09JC0lZ3R0M25oa2skLSU2NTI1NDQzNzIzMjYyNTYxMTY=";
+
+            endPointUrl = "https://ri-securityapi-sat.realpage.com/RequestInternalToken?Key="+ Key;
+            var tokenResponse = doExecuteApi(endPointUrl, "GET", null);
             Assert.IsNotNull(tokenResponse);
 
             var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(tokenResponse);
@@ -216,8 +222,8 @@ namespace RentersInsuranceApiTests
             table.Rows.Add("CarrierApi", "sat", "https://ri-carrierintegrationapi-sat.realpage.com/");
             table.Rows.Add("CarrierApi", "uat", "https://ri-carrierintegrationapi-uat.realpage.com/");
             table.Rows.Add("SettingsApi", "dev", "https://ri-settingsapi-dev.realpage.com/");
-            table.Rows.Add("SettingsApi", "sat", "http://ri-settingsapi-sat.realpage.com/");
-            table.Rows.Add("SettingsApi", "uat", "http://ri-settingsapi-uat.realpage.com/");
+            table.Rows.Add("SettingsApi", "sat", "https://ri-settingsapi-sat.realpage.com/");
+            table.Rows.Add("SettingsApi", "uat", "https://ri-settingsapi-uat.realpage.com/");
             table.Rows.Add("NotificationsApi", "dev", "https://ri-notificationapi-dev.realpage.com/");
             table.Rows.Add("NotificationsApi", "sat", "https://ri-notificationapi-sat.realpage.com/");
             table.Rows.Add("NotificationsApi", "uat", "https://ri-notificationapi-uat.realpage.com/");
