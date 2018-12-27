@@ -15,12 +15,8 @@ namespace RentersInsuranceApiTests.Controllers
             var path = Environment.GetEnvironmentVariable("PROPERTIES_FILE_PATH");
             if (path == null || path.Length == 0)
                 
-                path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)  + "properties.ini";
-            Console.WriteLine("aparna+++"+path);
-            // path = "C:\"Users\"amylavarapu\".jenkins\"workspace\"TestAPICICDFinal\"POLTest1\"properties.ini\";
-
-            // path = Path.GetFileName(Path.GetDirectoryName("C:/Users/amylavarapu/.jenkins/workspace/TestAPICICDFinal/POLTest1/properties.ini"));
-            //path = "C:/Users/amylavarapu/.jenkins/workspace/TestAPICICDFinal/POLTest1/properties.ini";
+                path = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)  + "\\properties.ini";
+      
             return path;
         }
 

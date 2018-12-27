@@ -4,7 +4,6 @@ using System.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using RentersInsuranceApiTests.Controllers;
-using System.IO;
 
 namespace RentersInsuranceApiTests
 {
@@ -36,27 +35,22 @@ namespace RentersInsuranceApiTests
         {
             if (!propertyLoaded)
             {
-                Console.WriteLine("test");
 
-             //   //Find properties.ini path 
-             //   propPath = PropertiesController.getPropertiesPath();
-
-
-             //   //Load properties from .ini file
-             //   properties = PropertiesController.readProperties(propPath);
-
-             
-
-             //   //TODO: Use a logger library
-              
-             //   if (properties["verbose"] != null) verbose = Convert.ToBoolean(properties["verbose"]);
-
-             //   //Set hostUrl
-             ////   if (hostUrl == null) hostUrl = properties["hostUrl"].Trim();
-             //   if (token == null) token = properties["token"].Trim();
+                //Find properties.ini path 
+                propPath = PropertiesController.getPropertiesPath();
 
 
-                propertyLoaded = true;
+                //Load properties from .ini file
+                properties = PropertiesController.readProperties(propPath);
+
+                //TODO: Use a logger library
+                if (properties["verbose"] != null) verbose = Convert.ToBoolean(properties["verbose"]);
+
+                //Set hostUrl
+             //   if (hostUrl == null) hostUrl = properties["hostUrl"].Trim();
+                if (token == null) token = properties["token"].Trim();
+
+                  propertyLoaded = true;
             }
         }
 
@@ -204,13 +198,11 @@ namespace RentersInsuranceApiTests
             ds.Tables.Add(table);
 
             var environment = "";
-            //propPath = PropertiesController.getPropertiesPath();
+            propPath = PropertiesController.getPropertiesPath();
 
-            ////Load properties from .ini file
-            //properties = PropertiesController.readProperties(propPath);
-            //environment = properties["environment"].Trim();
-            environment = "sat";
-            Console.WriteLine("REALPAGETESTPATH : " + Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory) + "\\properties.ini");
+            //Load properties from .ini file
+            properties = PropertiesController.readProperties(propPath);
+            environment = properties["environment"].Trim();
 
             table.Rows.Add("BillingApi", "dev", "https://ri-billingapi-dev.realpage.com/");
             table.Rows.Add("BillingApi", "sat", "https://ri-billingapi-sat.realpage.com/");
