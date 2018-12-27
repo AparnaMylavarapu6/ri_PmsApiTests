@@ -37,22 +37,22 @@ namespace RentersInsuranceApiTests
             {
                 Console.WriteLine("test");
 
-                //Find properties.ini path 
-                propPath = PropertiesController.getPropertiesPath();
+             //   //Find properties.ini path 
+             //   propPath = PropertiesController.getPropertiesPath();
 
 
-                //Load properties from .ini file
-                properties = PropertiesController.readProperties(propPath);
+             //   //Load properties from .ini file
+             //   properties = PropertiesController.readProperties(propPath);
 
              
 
-                //TODO: Use a logger library
+             //   //TODO: Use a logger library
               
-                if (properties["verbose"] != null) verbose = Convert.ToBoolean(properties["verbose"]);
+             //   if (properties["verbose"] != null) verbose = Convert.ToBoolean(properties["verbose"]);
 
-                //Set hostUrl
-             //   if (hostUrl == null) hostUrl = properties["hostUrl"].Trim();
-                if (token == null) token = properties["token"].Trim();
+             //   //Set hostUrl
+             ////   if (hostUrl == null) hostUrl = properties["hostUrl"].Trim();
+             //   if (token == null) token = properties["token"].Trim();
 
 
                 propertyLoaded = true;
