@@ -4,6 +4,7 @@ using System.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using RentersInsuranceApiTests.Controllers;
+using System.IO;
 
 namespace RentersInsuranceApiTests
 {
@@ -203,11 +204,13 @@ namespace RentersInsuranceApiTests
             ds.Tables.Add(table);
 
             var environment = "";
-            propPath = PropertiesController.getPropertiesPath();
+            //propPath = PropertiesController.getPropertiesPath();
 
-            //Load properties from .ini file
-            properties = PropertiesController.readProperties(propPath);
-            environment = properties["environment"].Trim();
+            ////Load properties from .ini file
+            //properties = PropertiesController.readProperties(propPath);
+            //environment = properties["environment"].Trim();
+            environment = "sat";
+            Console.WriteLine("REALPAGETESTPATH : " + Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory) + "properties.ini");
 
             table.Rows.Add("BillingApi", "dev", "https://ri-billingapi-dev.realpage.com/");
             table.Rows.Add("BillingApi", "sat", "https://ri-billingapi-sat.realpage.com/");
